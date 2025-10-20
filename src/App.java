@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         //System.out.println(3317%3); //2 - StringBuffer
         //System.out.println(3317%17); //2 - Знайти таке слово в першому реченні заданого тексту, якого немає в жодному з наступних.
+        try{
         String str = "Навесні ліс оживає по-особливому. Молоді листочки на деревах, ніби оксамитові зелені очі, дивляться на світ. Сонце проникає крізь молодий листок, і земля вкривається яскравими квітами.\r\n"
                 + //
                 "Скрізь чути спів пташок. Кожна пташка співає свою пісню, і весь ліс наповнюється мелодією. Чути, як білка стрибає з гілки на гілку, а десь далеко чути, як лісник рубає дрова. Усе навколо живе, дихає та співає.\r\n"
@@ -130,4 +131,15 @@ public class App {
 
         System.out.println(unicElements);
     }
+        catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Помилка індексу при обробці рядка: " + e.getMessage());
+        } catch (NullPointerException e) {
+            System.out.println("Виявлено порожнє посилання: " + e.getMessage());
+        } catch (OutOfMemoryError e) {
+            System.out.println("Недостатньо пам’яті для обробки тексту.");
+        } catch (Exception e) {
+            System.out.println("Виникла помилка: " + e.getMessage());
+        } finally {
+            System.out.println("Роботу програми завершено.");
+        }}
 }
