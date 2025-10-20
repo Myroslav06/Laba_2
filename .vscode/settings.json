@@ -1,0 +1,22 @@
+{
+    // --- Твої існуючі налаштування ---
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+
+    // --- Додаємо UTF-8 підтримку ---
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true,
+
+    // --- Налаштовуємо консоль PowerShell з UTF-8 ---
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": ["-NoExit", "chcp 65001"]
+        }
+    }
+}
